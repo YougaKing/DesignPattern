@@ -1,5 +1,6 @@
 package com.youga.designpattern;
 
+import android.app.Instrumentation;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -30,5 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }, Service.BIND_AUTO_CREATE);
+
+
+        Intent intent = new Intent(this,EmptyActivity.class);
+        startActivity(intent);
     }
+
 }
